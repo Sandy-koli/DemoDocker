@@ -16,6 +16,6 @@ deploy:
     provider: pages
     skip_cleanup: true
     github_token: $GITHUB_TOKEN_DemoDocker
-    local_dir: dist/demo-docker
+    local_dir: dist/DemoDocker
     on:
         branch: master
