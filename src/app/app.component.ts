@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'DemoDocker';
+  title = 'Demo Docker with Travis CI';
+  author = 'Sandeep & Tejas:'
 }
