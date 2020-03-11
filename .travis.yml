@@ -12,24 +12,24 @@ script:
     - ng build --prod --base-href https://github.com/Sandy-koli/DemoDocker
 
 
-# deploy:
-    # provider: pages
-    # skip_cleanup: true
-    # github_token: $GITHUB_TOKEN_DemoDocker
-    # local_dir: dist/DemoDocker
-    # on:
-    #     branch: master
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN_DemoDocker
+    local_dir: dist/DemoDocker
+    on:
+        branch: master
 
-    deploy:
-        provider: elasticbeanstalk
-        access_key_id: ${AWS_ACCESS_KEY_ID}             
-        secret_access_key: ${AWS_SECRET_ACCESS_KEY}    
-        region: "eu-west-2"
-        app: "AngularApp"                     
-        env: "Angularapp-env"                     
-        bucket_name: "elasticbeanstalk-eu-west-2-650526903864"
-        on:
-          branch: master
+    # deploy:
+    #     provider: elasticbeanstalk
+    #     access_key_id: ${AWS_ACCESS_KEY_ID}             
+    #     secret_access_key: ${AWS_SECRET_ACCESS_KEY}    
+    #     region: "eu-west-2"
+    #     app: "AngularApp"                     
+    #     env: "Angularapp-env"                     
+    #     bucket_name: "elasticbeanstalk-eu-west-2-650526903864"
+    #     on:
+    #       branch: master
       
-    after_deploy:
-        - echo "Applcation Deployed!"
+    # after_deploy:
+    #     - echo "Applcation Deployed!"
